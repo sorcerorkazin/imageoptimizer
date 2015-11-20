@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://getbootstrap.com/examples/sticky-footer/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="templates/css/bootstrap.min.css" rel="stylesheet">
+    <link href="templates/css/custom.css" rel="stylesheet">
+    <link href="templates/css/bootstrap-slider.css" media="all" rel="stylesheet">
+
+   
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="templates/index_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+  
+  </head>
+
+  <body>
+    <!-- Begin page content -->
+
+    <div class="container">
+
+      <header>
+        <div class="page-header">
+          <img src="templates/images/logo.jpg">
+        </div>
+      </header>
+
+      <section>
+        <div class="row">
+          <div class="col-md-10">
+            <h3>Results - You've Been Ninja'd</h3>
+            <p>You converted <TMPL_VAR NAME=totalImages> images</p>
+            <p>We have saved you <TMPL_VAR NAME=percentage>% - that's <TMPL_VAR NAME=amountSaved>!</p>
+            <TMPL_IF NAME=hasErrors>
+                <p><a href="geterrors.pl?storeHash=<TMPL_VAR NAME=storeHash>&userID=<TMPL_VAR NAME=userID>">Download the errors.</a></p>
+            </TMPL_IF>
+            <p><a href="goback.pl?storeHash=<TMPL_VAR NAME=storeHash>&userID=<TMPL_VAR NAME=userID>">Return to the beginning.</a></p>
+          </div>
+        </div>
+      </section> 
+
+      <footer class="footer">
+        <p class="text-muted">&copy; BC Ninjas 2015</p>
+      </footer>
+
+    </div>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="templates/index_files/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <!--Scripts for Compression Slider-->
+    <script src="templates/js/slider-plugin.js"></script>
+    <script src="templates/js/slider-main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.post("http://sevillasplayground.com/imageoptimizer/testAJAX.pl",{page:1,batch:1,hash:"xxxxx"}, function(result){
+            $("#div1").text(result);
+        });
+	});
+ });
+</script>
+<button>Get External Content</button>
+
+</body>
+</html>
